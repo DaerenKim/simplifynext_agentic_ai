@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Unfrazzle Design System - Calming & Mindful Colors */
+
+@layer base {
+  :root {
+    /* Lalaland theme - dreamy purples and bright accents */
+    --background: 240 100% 99%;
+    --foreground: 254 100% 19%;
+
+    /* Card colors with purple warmth */
+    --card: 240 100% 98%;
+    --card-foreground: 254 100% 25%;
+
+    --popover: 240 100% 98%;
+    --popover-foreground: 254 100% 25%;
+
+    /* Primary - deep purple */
+    --primary: 254 100% 19%;
+    --primary-foreground: 240 100% 99%;
+    --primary-soft: 254 60% 85%;
+
+    /* Secondary - medium purple */
+    --secondary: 254 69% 36%;
+    --secondary-foreground: 240 100% 99%;
+
+    /* Soft muted tones with purple tint */
+    --muted: 250 30% 92%;
+    --muted-foreground: 254 40% 45%;
+
+    /* Accent - lighter purple */
+    --accent: 260 60% 46%;
+    --accent-foreground: 240 100% 99%;
+
+    /* Gentle destructive */
+    --destructive: 0 50% 65%;
+    --destructive-foreground: 240 100% 99%;
+
+    /* Subtle borders with purple tint */
+    --border: 250 25% 88%;
+    --input: 250 25% 88%;
+    --ring: 260 60% 55%;
+
+    /* Gradients for backgrounds */
+    --gradient-calm: linear-gradient(135deg, 
+      hsl(270, 90%, 15%) 0%, 
+      hsl(270, 80%, 35%) 70%, 
+      hsl(25, 80%, 65%) 85%, 
+      hsl(45, 85%, 60%) 100%);
+    
+    --gradient-subtle: linear-gradient(180deg, 
+      hsl(240, 100%, 99%) 0%, 
+      hsl(250, 50%, 95%) 100%);
+
+    /* Magical shadows */
+    --shadow-soft: 0 4px 20px hsl(254, 100%, 19% / 0.1);
+    --shadow-glow: 0 0 30px hsl(260, 60%, 46% / 0.15);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-gentle: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme - deep purples with better contrast */
+    --background: 254 100% 8%;
+    --foreground: 240 100% 95%;
+
+    --card: 254 100% 10%;
+    --card-foreground: 240 100% 95%;
+
+    --popover: 254 100% 10%;
+    --popover-foreground: 240 100% 95%;
+
+    /* Primary - bright purple for dark mode */
+    --primary: 260 100% 70%;
+    --primary-foreground: 254 100% 8%;
+    --primary-soft: 260 50% 25%;
+
+    /* Secondary - medium purple */
+    --secondary: 254 60% 25%;
+    --secondary-foreground: 240 100% 95%;
+
+    /* Muted tones for dark mode */
+    --muted: 254 30% 15%;
+    --muted-foreground: 254 40% 65%;
+
+    /* Accent - lighter purple for dark */
+    --accent: 260 60% 30%;
+    --accent-foreground: 240 100% 95%;
+
+    /* Gentle destructive for dark */
+    --destructive: 0 50% 55%;
+    --destructive-foreground: 240 100% 95%;
+
+    /* Dark borders */
+    --border: 254 25% 20%;
+    --input: 254 25% 20%;
+    --ring: 260 100% 70%;
+
+    /* Gradients for dark mode */
+    --gradient-calm: linear-gradient(135deg, 
+      hsl(270, 90%, 8%) 0%, 
+      hsl(270, 80%, 15%) 70%, 
+      hsl(25, 80%, 25%) 85%, 
+      hsl(45, 85%, 30%) 100%);
+    
+    --gradient-subtle: linear-gradient(180deg, 
+      hsl(254, 100%, 8%) 0%, 
+      hsl(254, 50%, 12%) 100%);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Gradient backgrounds */
+  .bg-gradient-calm {
+    background: var(--gradient-calm);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Yellow accent for lalaland theme */
+  .text-yellow-300 {
+    color: hsl(61, 100%, 51%);
+  }
+
+  /* Animation classes */
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Transition utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-gentle {
+    transition: var(--transition-gentle);
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
