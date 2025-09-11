@@ -1,7 +1,7 @@
 # Unfrazzle - AI-Powered Burnout Prevention & Mental Wellness Platform
 
 #### By: Daeren Kim, Ong Jia Xi, Lee Kai Rong
----
+
 ## Our Mission
 
 We noticed that many people are afraid to admit they're experiencing burnout because it's often seen as a sign of incompetency in the workplace. This stigma prevents people from seeking help when they need it most, leading to worse outcomes for both individuals and organizations.
